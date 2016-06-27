@@ -12,24 +12,29 @@ For example, we set `VERIFY_CERT_PATH` to `'/assets/test/acp_test_verify_sign.ce
 Then, require `UnionPay.php` in your project. Use `UnionPay\UnionPay::sign($data);` to sign `$data`(should be an array), `UnionPay\UnionPay::verify($data)` to verify `$data`.
 ## Interface
 * UnionPay::sign
->* parameters: 
-    * array &$param
->* return: 
-    * bool
->* description:  
-The index `'signature'` & `'certId'` will be set, and return true if the input is correct. If sign failed, return false.
+
+parameters:  
+> * array &$param
+
+return: 
+> * bool
+
+description:  
+> The index `'signature'` & `'certId'` will be set, and return true if the input is correct. If sign failed, return false.
 
 * UnionPay::verify
->* parameters:
-    * array $param
->* return:
-    * bool
->* description:  
-Return true if verify successfully. Else return false. Make sure the param is from UnionPay.
+
+parameters:
+> * array $param
+
+return:
+> * bool
+
+description:  
+> Return true if verify successfully. Else return false. Make sure the param is from UnionPay.
 
 ## Example
 * sign
-> 
 ```
 <?php
 require_once "UnionPay.php";
@@ -73,7 +78,6 @@ UnionPay\UnionPay::sign($data);
 The effect of code above is to create a form for customers to complete the payment.
 
 * verify
-> 
 ```
 <?php
 require_once "UnionPay.php";
